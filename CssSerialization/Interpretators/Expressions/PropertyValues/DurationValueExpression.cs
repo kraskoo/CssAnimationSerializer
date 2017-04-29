@@ -37,7 +37,7 @@
         {
             context.Append($"{this.duration}");
             this.unitType.Interpret(context);
-            new SemicolonExpression().Interpret(context);
+            new Semicolon().Interpret(context);
         }
 
         private void ValidateTypeState(int outterDuration, string unit)

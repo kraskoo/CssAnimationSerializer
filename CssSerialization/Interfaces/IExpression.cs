@@ -30,6 +30,10 @@
     /// </summary>
     public interface IExpression
     {
+        void AddSuccessor(IExpression expression);
+
+        bool RemoveSuccessor();
+
         void Interpret(IContext context);
     }
 }

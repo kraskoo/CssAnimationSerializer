@@ -1,18 +1,12 @@
 ﻿namespace Interpretators.Expressions
 {
-    using Interfaces;
+    using System;
 
-    public class NameExpression : IdentifierExpression<string>
+    public abstract class NameExpression<TParam> : GenericExpression<TParam>
+        where TParam : IConvertible
     {
-        public NameExpression(
-            string representation) : base(
-                representation)
+        protected NameExpression(TParam representation) : base(representation)
         {
-        }
-
-        public override void Interpret(IContext context)
-        {
-            context.Append(this.Representation);
         }
     }
 }

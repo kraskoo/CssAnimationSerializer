@@ -41,11 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\CssPropertyType.cs" />
+    <Compile Include="Enums\CommonPropertyValues.cs" />
     <Compile Include="Enums\MeasurementUnitType.cs" />
     <Compile Include="Enums\PropertyValueTypes.cs" />
     <Compile Include="Enums\SyntaxParticularityType.cs" />
     <Compile Include="Enums\TransformType.cs" />
     <Compile Include="Enums\WhitespaceType.cs" />
+    <Compile Include="Factories\CommonPropertyValueFactory.cs" />
     <Compile Include="Factories\CssPropertyFactory.cs" />
     <Compile Include="Factories\MeasurementUnitFactory.cs" />
     <Compile Include="Factories\PropertyValueFactory.cs" />
@@ -56,6 +58,10 @@
     <Compile Include="RgbColor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{9594e479-e246-4b1a-a52e-28ddce0621f1}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
       <Project>{030FC2F2-B645-44E3-9D91-DDA05A6A469D}</Project>
       <Name>Interfaces</Name>

@@ -15,6 +15,8 @@
                     return ": ";
                 case SyntaxParticularityType.CloseBrase:
                     return "}";
+                case SyntaxParticularityType.Semicolon:
+                    return ";";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, "Invalid syntax particularity type.");
             }

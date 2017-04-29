@@ -2,8 +2,9 @@
 {
     public enum SyntaxParticularityType
     {
+        CloseBrase,
         OpenBrace,
         ValueEqualitySign,
-        CloseBrase
+        Semicolon
     }
 }

@@ -7,5 +7,7 @@
         public Writer(TextWriter writer) : base(writer)
         {
         }
+
+        public TextWriter Out => this.Writer;
     }
 }

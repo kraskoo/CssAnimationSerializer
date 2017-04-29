@@ -50,6 +50,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CodeProvider\CodeProvider.csproj">
+      <Project>{4c3aa180-cc4b-4d96-b245-d90ad26bee96}</Project>
+      <Name>CodeProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{9594E479-E246-4B1A-A52E-28DDCE0621F1}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CssAnimationSerializer\CssAnimationSerializer.csproj">
       <Project>{2c4d9ae9-1617-40d2-b1dc-8dfa8c2cff91}</Project>
       <Name>CssAnimationSerializer</Name>
@@ -69,6 +77,10 @@
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{2dca4b14-5a94-4632-b873-83d3c47cbca8}</Project>
       <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TypeBuilders\TypeBuilders.csproj">
+      <Project>{71264A98-4992-4FB2-AF3D-7DA11C29405C}</Project>
+      <Name>TypeBuilders</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

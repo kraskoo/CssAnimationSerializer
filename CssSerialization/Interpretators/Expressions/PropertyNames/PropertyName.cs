@@ -3,11 +3,11 @@
     using Models.Enums;
     using Models.Factories;
 
-    public abstract class PropertyName : IdentifierExpression<string>
+    public abstract class PropertyName : NameExpression<string>
     {
         protected PropertyName(
-            CssPropertyType representation) : base(
-                CssPropertyFactory.GetCssPropertyString(representation))
+            CssPropertyType propertyType) : base(
+                CssPropertyFactory.GetCssPropertyString(propertyType))
         {
         }
     }

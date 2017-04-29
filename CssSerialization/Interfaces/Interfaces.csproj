@@ -41,11 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IContext.cs" />
-    <Compile Include="ICssAnimationFormatterConverter.cs" />
     <Compile Include="IExpression.cs" />
     <Compile Include="IInputReader.cs" />
     <Compile Include="IModel.cs" />
-    <Compile Include="INestedExpression.cs" />
     <Compile Include="IOutputWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,67 +7,67 @@
 
     public abstract class OutputWriter : IOutputWriter
     {
-        private TextWriter writer;
-
         protected OutputWriter(TextWriter writer)
         {
-            this.writer = writer;
+            this.Writer = writer;
         }
+
+        protected TextWriter Writer { get; private set; }
 
         public void Write(string format, params object[] parameters)
         {
-            this.writer.Write(format, parameters);
+            this.Writer.Write(format, parameters);
         }
 
         public void Write(string message)
         {
-            this.writer.Write(message);
+            this.Writer.Write(message);
         }
 
         public async Task WriteAsync(string format, params object[] parameters)
         {
-            await this.writer.WriteAsync(string.Format(format, parameters));
+            await this.Writer.WriteAsync(string.Format(format, parameters));
         }
 
         public async Task WriteAsync(string message)
         {
-            await this.writer.WriteAsync(message);
+            await this.Writer.WriteAsync(message);
         }
 
         public void WriteLine()
         {
-            this.writer.WriteLine();
+            this.Writer.WriteLine();
         }
 
         public void WriteLine(string format, params object[] parameters)
         {
-            this.writer.WriteLine(format, parameters);
+            this.Writer.WriteLine(format, parameters);
         }
 
         public void WriteLine(string message)
         {
-            this.writer.WriteLine(message);
+            this.Writer.WriteLine(message);
         }
 
         public async Task WriteLineAsync()
         {
-            await this.writer.WriteLineAsync();
+            await this.Writer.WriteLineAsync();
         }
 
         public async Task WriteLineAsync(string message)
         {
-            await this.writer.WriteLineAsync(message);
+            await this.Writer.WriteLineAsync(message);
         }
 
         public async Task WriteLineAsync(string format, params object[] parameters)
         {
-            await this.writer.WriteLineAsync(string.Format(format, parameters));
+            await this.Writer.WriteLineAsync(string.Format(format, parameters));
         }
 
         public void Dispose()
         {
-            this.writer?.Dispose();
-            this.writer = null;
+            this.Writer?.Dispose();
+            this.Writer = null;
             GC.SuppressFinalize(this);
         }
     }
