@@ -9,13 +9,13 @@
         private static readonly Lazy<EnumerationProvider<T>> LazyInstance =
             new Lazy<EnumerationProvider<T>>(() => new EnumerationProvider<T>());
 
+        private static EnumerationProvider<T> instance;
+
         private EnumerationProvider(IFormatProvider provider)
         {
             this.FormatProvider = provider;
-            Instance = default(EnumerationProvider<T>);
+            instance = default(EnumerationProvider<T>);
         }
-
-        public static EnumerationProvider<T> Instance { get; private set; }
 
         private EnumerationProvider() : this(CultureInfo.CurrentCulture)
         {
@@ -25,7 +25,7 @@
 
         public static EnumerationProvider<T> Create()
         {
-            return Instance ?? LazyInstance.Value;
+            return instance ?? LazyInstance.Value;
         }
     }
 }
