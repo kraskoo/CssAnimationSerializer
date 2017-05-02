@@ -30,18 +30,18 @@ BNF Notations
 \<enumarator\> ::= \<constant\> | \<identifier\> = \<constant-expression\>
 \<constant\> ::= \<integer-constant\> | \<character-constant\> | \<enumeration-constant\>
 
-		Client
-		  |
-		  v
-	 ----------------
-	 |				|
+        Client
+          |
+          v
+     ----------------
+     |              |
 	 v				v
-Context		Abstract Expression\<------------
-					^					   |
-					|       			   |
-			---------------------		   |
-			|					|		   |
-		Terminal			Nonterminal	   |
-								.		   |
-								|		   |
-								------------
+Context     Abstract Expression\<-----------
+                    ^                      |
+                    |                      |
+            ---------------------          |
+			|					|          |
+          Terminal			Nonterminal    |
+                                .          |
+                                |          |
+                                ------------
