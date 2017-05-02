@@ -33,13 +33,13 @@ BNF Notations
           v
      ----------------
      |              |
-	 v				v
+     v              v
 Context     Abstract Expression<------------
                     ^                      |
-                    |                      |
+					|                      |
             ---------------------          |
 			|					|          |
-          Terminal			Nonterminal    |
+         Terminal          Nonterminal     |
                                 .          |
                                 |          |
                                 ------------
