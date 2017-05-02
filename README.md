@@ -34,7 +34,7 @@ BNF Notations
      ----------------
      |              |
 	 v				v
-Context     Abstract Expression\<-----------
+Context     Abstract Expression<------------
                     ^                      |
                     |                      |
             ---------------------          |
